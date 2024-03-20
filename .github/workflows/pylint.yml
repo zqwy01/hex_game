@@ -21,6 +21,10 @@ jobs:
     - name: Analysing the code with gdlint
       run: |
         gdformat $(git ls-files '*.gd')
+    - name: Commit & Push changes
+      uses: Andro999b/push@v1.3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: Commit to Release
       run: |
         git commit -m "Первый коммит"
