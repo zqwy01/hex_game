@@ -28,5 +28,5 @@ jobs:
         
     - name: Commit to Release
       run: |
-        git commit -ma "First Commit"
+        git commit -a
         git push origin master
