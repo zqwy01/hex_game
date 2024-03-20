@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://c2pubstjlbjua"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_jgu2r"]
+[ext_resource type="Texture2D" uid="uid://bislm4iajixhq" path="res://Tiles.png" id="1_ojoq8"]
+[ext_resource type="Script" path="res://TileMap_Controller.gd" id="2_ko23v"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t05os"]
+texture = ExtResource("1_ojoq8")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_qly22"]
+tile_shape = 3
+sources/1 = SubResource("TileSetAtlasSource_t05os")
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_jgu2r")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(109, 127)
+
+[node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
+tile_set = SubResource("TileSet_qly22")
+format = 2
+script = ExtResource("2_ko23v")
