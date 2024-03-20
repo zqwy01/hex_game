@@ -23,9 +23,9 @@ jobs:
         gdformat $(git ls-files '*.gd')
     - name: Commit to Release
       run: |
-        git config --global user.email "no-reply@github.com"
+        git config --global user.email "zqwymusic@vk.com"
         git config --global user.name "GitHub Actions"
-        git add static/blog.json
+        git add *
         git commit -m "First Commit"
         git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
         git push
