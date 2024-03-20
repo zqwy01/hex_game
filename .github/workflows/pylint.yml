@@ -28,5 +28,6 @@ jobs:
         
     - name: Commit to Release
       run: |
-        git commit -a -m "Releases"
+        git add -A
+        git commit -a
         git push origin master
