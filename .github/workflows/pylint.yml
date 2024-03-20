@@ -21,10 +21,12 @@ jobs:
     - name: Analysing the code with gdlint
       run: |
         gdformat $(git ls-files '*.gd')
-    - name: Commit & Push changes
-      uses: Andro999b/push@v1.3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: Commit to Release
       run: |
-        git commit -m "Первый коммит"
+        git config --global user.email "no-reply@github.com"
+        git config --global user.name "GitHub Actions"
+        git add static/blog.json
+        git commit -m "First Commit"
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git push
+        
