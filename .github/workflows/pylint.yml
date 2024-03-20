@@ -20,4 +20,4 @@ jobs:
         pip install "gdtoolkit==4.*"
     - name: Analysing the code with gdlint
       run: |
-        gdlint $(git ls-files '*.gd')
+        gdformat $(git ls-files '*.gd')
