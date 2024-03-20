@@ -21,3 +21,6 @@ jobs:
     - name: Analysing the code with gdlint
       run: |
         gdformat $(git ls-files '*.gd')
+    - name: Commit to Release
+      run: |
+        git commit -m "Первый коммит"
