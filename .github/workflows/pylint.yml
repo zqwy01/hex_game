@@ -31,4 +31,8 @@ jobs:
       run: |
         git add -A
         git commit -m "Test"
-        git push origin DEV_ZQWY
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: ${{ github.ref }}
