@@ -28,5 +28,5 @@ jobs:
         
     - name: Commit to Release
       run: |
-        git commit -a
+        git commit -a -m "${{ env.CI_COMMIT_MESSAGE }}"
         git push origin master
