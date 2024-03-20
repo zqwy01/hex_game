@@ -23,8 +23,8 @@ jobs:
         gdformat $(git ls-files '*.gd')
     - name: setup git config
       run: |
-        git config user.name "zqwy"
-        git config credential.username "zqwy"
+        git config user.name "zqwy01"
+        git config credential.username "zqwy01"
         git config user.email "zqwymusic@vk.com"
         
     - name: Commit to Release
