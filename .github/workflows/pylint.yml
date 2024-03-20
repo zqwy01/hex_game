@@ -29,5 +29,5 @@ jobs:
     - name: Commit to Release
       run: |
         git add -A
-        git commit -a
+        git commit -m "Test"
         git push origin master
