@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://c2pubstjlbjua"]
+[gd_scene load_steps=7 format=3 uid="uid://c2pubstjlbjua"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_jgu2r"]
 [ext_resource type="Texture2D" uid="uid://bislm4iajixhq" path="res://Tiles.png" id="1_ojoq8"]
+[ext_resource type="Script" path="res://Tests/test_run.gd" id="1_ym4gg"]
 [ext_resource type="Script" path="res://TileMap_Controller.gd" id="2_ko23v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t05os"]
@@ -32,3 +33,6 @@ texture_filter = 1
 tile_set = SubResource("TileSet_qly22")
 format = 2
 script = ExtResource("2_ko23v")
+
+[node name="Node2D" type="Node2D" parent="."]
+script = ExtResource("1_ym4gg")

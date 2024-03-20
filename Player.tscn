@@ -3,12 +3,16 @@
 [sub_resource type="GDScript" id="GDScript_t7i7y"]
 script/source = "extends Node2D
 
+func test_empty_board():
+	var hexmap = get_node(\"TileMap\")
+	
+	#assert_eq(hexmap, 0, \"Good\")
+	
 func _enter_tree():
 	set_multiplayer_authority(name.to_int())
 "
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_h7u0y"]
-load_path = "res://.godot/imported/14118518.png-4c7f2458d3930cd4943388b5f034e749.ctex"
 
 [node name="Player" type="Node2D"]
 script = SubResource("GDScript_t7i7y")
